@@ -20,7 +20,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Subir restaurant</h5>
-          <form id="form" >
+          <form id="form" method="POST" action="/" >
             <label>Name:</label>
             <input id="name" type="" name="name" placeholder="Name">
             <label>Description:</label>
@@ -58,24 +58,5 @@
 </style>
 
 <%- contentFor('scripts') %>
-<script>
-  $(document).ready(function() {
-
-    function startMap() {
-      var restaurantsMap = {
-        lat: 41.3977381,
-        lng: 2.190471916
-      };
-      var map = new google.maps.Map(
-        document.getElementById('map'),
-        {
-          zoom: 15,
-          center: restaurantsMap
-        }
-      );
-    }
-  
-    startMap();
-
-  });
+<script src="/map.js">
 </script>

@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', (req, res, next) => {
 	let restaurant = new Restaurant();
-	
+	console.log(req.body);
 	restaurant.name = req.body.name;
 	restaurant.description = req.body.description;
 	restaurant.location.type = 'Point';
