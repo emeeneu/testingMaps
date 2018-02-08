@@ -5,7 +5,7 @@ const Restaurant = require('../models/restaurant');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Express' });
+	res.render('index');
 });
 
 router.post('/', (req, res, next) => {

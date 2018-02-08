@@ -19,9 +19,9 @@ router.get('/', (req, res) => {
 
 // Crear restaurantes
 router.post('/', (req, res, next) => {
-	console.log('req.body', req.body);
+	
 	const restaurant = req.body;
-	console.log('restaurant', restaurant);
+	
 	Restaurant.create( restaurant )
 		.then((value) => {
 			res.status(200)
